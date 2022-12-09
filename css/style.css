@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+--violet: hsl(257, 40%, 49%);
+--soft-Magenta: hsl(300, 69%, 71%);
+--font-openSans:'Open Sans', sans-serif;
+--font-Poppins:'Poppins', sans-serif;;
+}
+html,
+body,
+.container{
+    height: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--violet);
+    padding: 0;
+    margin: 0;
+}
+.bg-img{
+    background-image: url(../images/bg-desktop.svg);
+    height: 100%;
+    width: 100%;
+    background-position-y:100% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main{
+    height: 62%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+main h1{
+    text-transform:capitalize;
+    font-size: 50px;
+    font-weight: 600;
+}
+main h1,
+main p{
+    color: white;
+    font-family: var(--font-Poppins);
+}
+main p{
+ font-size: 20px;
+}
+
+main > div{
+    width: 50%;
+} 
+main img{
+    width: 100%;
+}
+main button{
+    background-color:white!important;
+    border: none;
+    padding: 0.5rem 3rem;
+    font-family: var(--font-Poppins);
+    color: var(--violet);
+    transition: background-color 0.5s linear;
+}
+main button:hover{
+    color: white;
+    background-color: var(--soft-Magenta)!important;
+}
+.icon_container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+footer .icon_container div{
+    padding:10px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+footer img{
+    width: 24px;
+}
+
+
+@media screen  and (max-width:768px){
+    .bg-img{
+        background-image: url(../images/bg-mobile.svg); 
+        background-position: 0px -78px;
+        background-size: 100% 80%;
+    }
+    main{
+        flex-wrap: wrap;
+        gap: 5rem;
+        height: 100%;
+    }
+    main > div{
+        width: 100%;
+     
+        text-align: center;
+    }
+    main h1{
+        font-size: 40px;
+       }
+    main p{
+        font-size: 25px;
+       }
+    button{
+        margin: 2rem 0;
+    }
+    footer{
+        margin-top: 2rem;
+    }
+    .icon_container{
+        justify-content: center;
+    }
+}
